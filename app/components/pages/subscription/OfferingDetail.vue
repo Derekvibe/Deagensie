@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { OfferingContentFeatureGridSection, OfferingPlan } from '~/types/api';
+import type { OfferingPlan } from '~/types/api';
 import { Icon } from '@iconify/vue';
 
 const { code, offering, pending, error, refresh } = await useSubscriptionPlanContext();

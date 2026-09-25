@@ -18,9 +18,20 @@ const handleNewsletterSubmit = () => {
   }, 600);
 };
 
+interface ResourceItem {
+  category: string;
+  title: string;
+  description: string;
+  image: string;
+  readTime: string;
+  type: string;
+  date: string;
+  fullContent?: string;
+}
+
 const activeCategory = ref('All');
 const searchQuery = ref('');
-const selectedResource = ref<any | null>(null);
+const selectedResource = ref<ResourceItem | null>(null);
 
 const categories = ['All', 'AI Playbooks', 'Ebooks & Guides', 'White Papers', 'Research', 'Blog Articles'];
 
@@ -129,7 +140,7 @@ const filteredResources = computed(() => {
   });
 });
 
-const openModal = (item: any) => {
+const openModal = (item: ResourceItem) => {
   selectedResource.value = item;
 };
 

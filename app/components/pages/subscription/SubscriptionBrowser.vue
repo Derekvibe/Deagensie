@@ -10,8 +10,6 @@ const loadMoreTrigger = useTemplateRef<HTMLElement>('loadMoreTrigger');
 const {
   data: offeringsPage,
   pending,
-  error,
-  refresh,
 } = await useApiData<OfferingsResponse>('/offerings', {
   key: 'offerings-page-1',
   baseURL: '/api',
@@ -81,7 +79,7 @@ watch(
 const carouselContent = useTemplateRef<HTMLElement>('carouselContent');
 const carouselRoot = useTemplateRef<HTMLElement>('carouselRoot');
 
-const { isOverflowing } = useOverflow(carouselContent, {
+useOverflow(carouselContent, {
   containerRef: carouselRoot,
 });
 </script>

@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import type { ComponentPublicInstance } from 'vue';
 import { demoProjects, demoStats, portfolioFilters } from '~/data/portfolio';
 import { Icon } from '@iconify/vue';
 import type { PortfolioProject } from '~/types/api';
@@ -62,7 +63,7 @@ const animateStat = (index: number) => {
   requestAnimationFrame(tick);
 };
 
-const setStatRef = (el: Element | any | null, i: number) => {
+const setStatRef = (el: Element | ComponentPublicInstance | null, i: number) => {
   if (el instanceof HTMLElement) statRefs.value[i] = el;
 };
 
