@@ -1,0 +1,44 @@
+name: Deploy to Netlify
+on:
+  push:
+    branches: [staging]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    container:
+      image: debian:trixie
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v6
+      - name: Install system dependencies
+        run: apt-get update && apt-get install -y libatomic1
+      - name: Setup Node.js
+        uses: actions/setup-node@v6
+        with:
+          node-version-file: '.nvmrc'
+          check-latest: true
+      - name: Enable pnpm with Corepack
+        run: corepack enable
+      - name: Cache pnpm store
+        uses: actions/cache@v5
+        with:
+          path: ~/.pnpm-store
+          key: pnpm-${{ hashFiles('pnpm-lock.yaml') }}
+          restore-keys: pnpm-
+      - name: Install dependencies
+        run: CI=true pnpm install --frozen-lockfile
+      - name: Check linting
+        run: pnpm lint
+      - name: Check formatting
+        run: pnpm format:check
+      - name: Run typecheck
+        run: pnpm typecheck
+      - name: Build application
+        run: pnpm build
+      - name: Deploy to Netlify
+        env:
+          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+          NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
+          NODE_OPTIONS: ${{ secrets.NODE_OPTIONS }}
+          NUXT_PUBLIC_API_BASE: ${{ secrets.NUXT_PUBLIC_API_BASE }}
+        run: pnpm dlx netlify deploy --prod --no-build
