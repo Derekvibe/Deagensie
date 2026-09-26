@@ -9,13 +9,14 @@
 The Deagensie platform underwent a complete **editorial redesign** referencing top-tier platforms such as **Andela**, focusing on clean white backdrops, rich typography, responsive card layouts, and subtle scroll-triggered micro-animations.
 
 ### Key Achievements:
+
 - **Andela-Inspired Editorial Aesthetic**: Clean white backdrops (`bg-white`), serif headlines (`font-serif`), shadow-elevated cards, and brand-accented glassmorphism (`#05DED5`, `#04308F`, `#8F039C`).
 - **Site-Wide Custom Animation System**: Custom `v-reveal` directive powered by Intersection Observer supporting `fade-up`, `fade-down`, `fade-left`, `fade-right`, `scale-in`, `blur-in`, and `clip-up` effects.
-- **Homepage Stacking Cards Scroll Animation**: Interactive sticky stacking cards for the *"Unmatched Growth Architecture"* section where cards overlap seamlessly on scroll.
+- **Homepage Stacking Cards Scroll Animation**: Interactive sticky stacking cards for the _"Unmatched Growth Architecture"_ section where cards overlap seamlessly on scroll.
 - **Overhauled Portfolio Experience (`/portfolio`)**:
   - 100% cover image assignment across all 10 showcase projects.
   - Interactive **Project Detail Modal** overlay with full client metadata, impact tags, and case study narrative.
-  - Natural scrolling category filter pills (*All Projects*, *Strategy*, *Branding*, *Product Design*, *UI/UX*, etc.).
+  - Natural scrolling category filter pills (_All Projects_, _Strategy_, _Branding_, _Product Design_, _UI/UX_, etc.).
   - Intersection Observer-based count-up statistics.
 - **Dedicated Contact Us Page (`/contact`)**:
   - Interactive project inquiry form with validation and responsive status feedback.
@@ -27,19 +28,20 @@ The Deagensie platform underwent a complete **editorial redesign** referencing t
 
 ## 🛠️ Technology Stack
 
-| Technology | Purpose |
-| :--- | :--- |
-| **Nuxt 4** | Full-stack Vue SSR / SSG framework |
-| **Vue 3 (Composition API)** | Reactive UI components & logic |
-| **Tailwind CSS v4** | Utility-first styling & design tokens |
-| **Iconify (`@iconify/vue`)** | High-performance vector iconography |
-| **Intersection Observer API** | Scroll animations & count-up stats |
+| Technology                    | Purpose                               |
+| :---------------------------- | :------------------------------------ |
+| **Nuxt 4**                    | Full-stack Vue SSR / SSG framework    |
+| **Vue 3 (Composition API)**   | Reactive UI components & logic        |
+| **Tailwind CSS v4**           | Utility-first styling & design tokens |
+| **Iconify (`@iconify/vue`)**  | High-performance vector iconography   |
+| **Intersection Observer API** | Scroll animations & count-up stats    |
 
 ---
 
 ## 🚀 Getting Started
 
 ### Prerequisites
+
 - **Node.js**: `v18.x` or higher
 - **Package Manager**: `pnpm` (recommended), `npm`, or `yarn`
 

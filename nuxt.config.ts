@@ -2,11 +2,7 @@
 export default defineNuxtConfig({
   compatibilityDate: '2025-07-15',
   devtools: { enabled: true },
-  css: [
-    '~/assets/css/main.css',
-    'notivue/notification.css',
-    'notivue/animations.css',
-  ],
+  css: ['~/assets/css/main.css', 'notivue/notification.css', 'notivue/animations.css'],
   vite: {
     plugins: [
       {
@@ -55,12 +51,13 @@ export default defineNuxtConfig({
     viteEnvironmentApi: true,
   },
   typescript: {
-    strict: false,      // Changed to false to be more lenient
-    typeCheck: false,   // Changed to false to disable vue-tsc
+    strict: false, // Changed to false to be more lenient
+    typeCheck: false, // Changed to false to disable vue-tsc
     builder: 'vite',
   },
   image: {
-    ...(process.env.CI === 'true' && { provider: 'netlify' }),
+    ...(process.env.VERCEL && { provider: 'vercel' }),
+    ...(process.env.NETLIFY && { provider: 'netlify' }),
   },
   modules: [
     '@nuxtjs/tailwindcss',
@@ -100,6 +97,7 @@ export default defineNuxtConfig({
     },
   },
   nitro: {
-    preset: 'netlify',
+    ...(process.env.VERCEL && { preset: 'vercel' }),
+    ...(process.env.NETLIFY && { preset: 'netlify' }),
   },
 });

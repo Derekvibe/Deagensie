@@ -13,7 +13,8 @@
     "lint:fix": "eslint . --fix",
     "format": "prettier --write .",
     "format:check": "prettier --check .",
-    "typecheck": "nuxt typecheck"
+    "typecheck": "nuxt typecheck",
+    "validate": "pnpm format && pnpm format:check && pnpm lint"
   },
   "dependencies": {
     "@faker-js/faker": "^10.4.0",

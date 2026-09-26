@@ -29,7 +29,7 @@ onUnmounted(() => {
       v-if="isVisible"
       type="button"
       aria-label="Back to top"
-      class="fixed bottom-8 right-8 z-50 flex size-12 items-center justify-center rounded-full bg-[#04308F] text-white shadow-xl shadow-[#04308F]/30 border border-white/20 backdrop-blur-md transition-all duration-300 hover:bg-[#05DED5] hover:text-gray-900 hover:scale-110 focus:outline-none"
+      class="fixed right-8 bottom-8 z-50 flex size-12 items-center justify-center rounded-full border border-white/20 bg-[#04308F] text-white shadow-xl shadow-[#04308F]/30 backdrop-blur-md transition-all duration-300 hover:scale-110 hover:bg-[#05DED5] hover:text-gray-900 focus:outline-none"
       @click="scrollToTop"
     >
       <Icon icon="lucide:chevron-up" class="text-2xl" />

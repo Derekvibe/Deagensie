@@ -42,48 +42,55 @@ const talentCategories = [
 </script>
 
 <template>
-  <section class="bg-white text-gray-900 py-20 lg:py-32 border-b border-gray-100">
+  <section class="border-b border-gray-100 bg-white py-20 text-gray-900 lg:py-32">
     <div class="mx-auto w-5/6 max-w-7xl space-y-16">
-      <div v-reveal="'fade-up'" class="text-center max-w-3xl mx-auto space-y-4">
-        <span class="text-xs uppercase tracking-widest text-[#04308F] font-semibold bg-[#04308F]/10 px-4 py-1.5 rounded-full inline-block">
+      <div v-reveal="'fade-up'" class="mx-auto max-w-3xl space-y-4 text-center">
+        <span
+          class="inline-block rounded-full bg-[#04308F]/10 px-4 py-1.5 text-xs font-semibold tracking-widest text-[#04308F] uppercase"
+        >
           Talent Categories
         </span>
-        <h2 class="text-3xl font-serif font-normal tracking-tight sm:text-4xl lg:text-5xl text-gray-900 leading-tight">
+        <h2
+          class="font-serif text-3xl leading-tight font-normal tracking-tight text-gray-900 sm:text-4xl lg:text-5xl"
+        >
           Explore Our Pool of Vetted Creative Talent
         </h2>
-        <p class="text-base text-gray-500 leading-relaxed font-normal">
-          From brand designers to growth marketers, Deagensie matches businesses with elite African creative professionals.
+        <p class="text-base leading-relaxed font-normal text-gray-500">
+          From brand designers to growth marketers, Deagensie matches businesses with elite African
+          creative professionals.
         </p>
       </div>
 
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div class="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
         <div
           v-for="(cat, cIndex) in talentCategories"
           :key="cat.title"
           v-reveal="{ animation: 'fade-up', delay: cIndex * 100 }"
-          class="p-8 rounded-3xl bg-gray-50/60 border border-gray-100 shadow-xs transition-all duration-300 hover:bg-white hover:shadow-xl hover:border-[#04308F]/20 hover:-translate-y-1 flex flex-col justify-between group"
+          class="group flex flex-col justify-between rounded-3xl border border-gray-100 bg-gray-50/60 p-8 shadow-xs transition-all duration-300 hover:-translate-y-1 hover:border-[#04308F]/20 hover:bg-white hover:shadow-xl"
         >
           <div class="space-y-4">
-            <div class="size-12 rounded-2xl bg-[#04308F]/10 text-[#04308F] flex items-center justify-center text-2xl group-hover:bg-[#04308F] group-hover:text-white transition-all duration-300">
+            <div
+              class="flex size-12 items-center justify-center rounded-2xl bg-[#04308F]/10 text-2xl text-[#04308F] transition-all duration-300 group-hover:bg-[#04308F] group-hover:text-white"
+            >
               <Icon :icon="cat.icon" />
             </div>
-            <h3 class="text-xl font-serif font-normal text-gray-900">{{ cat.title }}</h3>
-            <p class="text-xs text-gray-500 leading-relaxed font-normal">{{ cat.description }}</p>
+            <h3 class="font-serif text-xl font-normal text-gray-900">{{ cat.title }}</h3>
+            <p class="text-xs leading-relaxed font-normal text-gray-500">{{ cat.description }}</p>
 
             <div class="pt-2">
               <ul class="space-y-2 text-xs font-semibold text-gray-700">
                 <li v-for="role in cat.roles" :key="role" class="flex items-center gap-2">
-                  <Icon icon="lucide:check" class="text-[#05DED5] text-sm shrink-0" />
+                  <Icon icon="lucide:check" class="shrink-0 text-sm text-[#05DED5]" />
                   <span>{{ role }}</span>
                 </li>
               </ul>
             </div>
           </div>
 
-          <div class="pt-6 border-t border-gray-100 mt-6">
+          <div class="mt-6 border-t border-gray-100 pt-6">
             <NuxtLink
               to="/register"
-              class="inline-flex items-center gap-1.5 text-xs font-semibold text-[#04308F] group-hover:text-[#05DED5] transition-colors"
+              class="inline-flex items-center gap-1.5 text-xs font-semibold text-[#04308F] transition-colors group-hover:text-[#05DED5]"
             >
               Hire from this pool <Icon icon="lucide:arrow-right" class="text-sm" />
             </NuxtLink>
@@ -94,5 +101,4 @@ const talentCategories = [
   </section>
 </template>
 
-<style scoped lang="css">
-</style>
+<style scoped lang="css"></style>

@@ -161,13 +161,29 @@
 }
 
 /* Variants */
-.reveal-fade-up    { transform: translateY(36px); }
-.reveal-fade-down  { transform: translateY(-36px); }
-.reveal-fade-left  { transform: translateX(44px); }
-.reveal-fade-right { transform: translateX(-44px); }
-.reveal-scale-in   { transform: scale(0.93); }
-.reveal-blur-in    { filter: blur(6px); transform: translateY(16px); }
-.reveal-clip-up    { clip-path: inset(0 0 100% 0); transform: translateY(12px); }
+.reveal-fade-up {
+  transform: translateY(36px);
+}
+.reveal-fade-down {
+  transform: translateY(-36px);
+}
+.reveal-fade-left {
+  transform: translateX(44px);
+}
+.reveal-fade-right {
+  transform: translateX(-44px);
+}
+.reveal-scale-in {
+  transform: scale(0.93);
+}
+.reveal-blur-in {
+  filter: blur(6px);
+  transform: translateY(16px);
+}
+.reveal-clip-up {
+  clip-path: inset(0 0 100% 0);
+  transform: translateY(12px);
+}
 
 /* Final visible state */
 .reveal-visible {
@@ -181,28 +197,51 @@
    Floating elements — subtle ambient bob
    ──────────────────────────────────────────────*/
 @keyframes float-bob {
-  0%, 100% { transform: translateY(0px); }
-  50%       { transform: translateY(-8px); }
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
 }
 
 @keyframes float-bob-slow {
-  0%, 100% { transform: translateY(0px); }
-  50%       { transform: translateY(-5px); }
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
 }
 
-.animate-float      { animation: float-bob      3s ease-in-out infinite; }
-.animate-float-slow { animation: float-bob-slow 5s ease-in-out infinite; }
+.animate-float {
+  animation: float-bob 3s ease-in-out infinite;
+}
+.animate-float-slow {
+  animation: float-bob-slow 5s ease-in-out infinite;
+}
 
 /* ──────────────────────────────────────────────
    Shimmer — premium skeleton / highlight pulse
    ──────────────────────────────────────────────*/
 @keyframes shimmer {
-  0%   { background-position: -200% center; }
-  100% { background-position:  200% center; }
+  0% {
+    background-position: -200% center;
+  }
+  100% {
+    background-position: 200% center;
+  }
 }
 
 .animate-shimmer {
-  background: linear-gradient(90deg, transparent 25%, rgba(255,255,255,0.5) 50%, transparent 75%);
+  background: linear-gradient(
+    90deg,
+    transparent 25%,
+    rgba(255, 255, 255, 0.5) 50%,
+    transparent 75%
+  );
   background-size: 200% 100%;
   animation: shimmer 1.8s infinite;
 }
@@ -211,24 +250,38 @@
    Number count-up pulse
    ──────────────────────────────────────────────*/
 @keyframes count-pulse {
-  0%   { transform: scale(1); }
-  50%  { transform: scale(1.08); }
-  100% { transform: scale(1); }
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.08);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
 
-.animate-count-pulse { animation: count-pulse 0.4s ease-out; }
+.animate-count-pulse {
+  animation: count-pulse 0.4s ease-out;
+}
 
 /* ──────────────────────────────────────────────
    Gradient text animation
    ──────────────────────────────────────────────*/
 @keyframes gradient-shift {
-  0%   { background-position: 0% 50%; }
-  50%  { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 .animate-gradient-text {
-  background: linear-gradient(135deg, #04308F, #05DED5, #8F039C, #04308F);
+  background: linear-gradient(135deg, #04308f, #05ded5, #8f039c, #04308f);
   background-size: 300% 300%;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -240,9 +293,15 @@
    Glow pulse — brand accent glow on hover
    ──────────────────────────────────────────────*/
 @keyframes glow-pulse {
-  0%, 100% { box-shadow: 0 0 0 0 rgba(5, 222, 213, 0); }
-  50%       { box-shadow: 0 0 20px 4px rgba(5, 222, 213, 0.25); }
+  0%,
+  100% {
+    box-shadow: 0 0 0 0 rgba(5, 222, 213, 0);
+  }
+  50% {
+    box-shadow: 0 0 20px 4px rgba(5, 222, 213, 0.25);
+  }
 }
 
-.animate-glow-pulse { animation: glow-pulse 2s ease-in-out infinite; }
-
+.animate-glow-pulse {
+  animation: glow-pulse 2s ease-in-out infinite;
+}

@@ -30,29 +30,34 @@ const testimonials = [
 </script>
 
 <template>
-  <section class="bg-white text-gray-900 py-24 lg:py-32 overflow-hidden">
+  <section class="overflow-hidden bg-white py-24 text-gray-900 lg:py-32">
     <div class="mx-auto w-5/6 max-w-7xl space-y-16">
       <!-- Andela Rating Header Badge (Image 1 Header) -->
-      <div class="mx-auto max-w-3xl text-center space-y-5">
-        <div class="inline-flex items-center gap-2 rounded-full bg-white px-4 py-1.5 shadow-sm border border-gray-200 text-xs sm:text-sm font-semibold text-gray-800">
-          <span class="rounded-full bg-[#DD6A05] text-white size-5 flex items-center justify-center text-[10px] font-bold">G</span>
+      <div class="mx-auto max-w-3xl space-y-5 text-center">
+        <div
+          class="inline-flex items-center gap-2 rounded-full border border-gray-200 bg-white px-4 py-1.5 text-xs font-semibold text-gray-800 shadow-sm sm:text-sm"
+        >
+          <span
+            class="flex size-5 items-center justify-center rounded-full bg-[#DD6A05] text-[10px] font-bold text-white"
+            >G</span
+          >
           <span class="font-bold text-gray-900">4.9</span>
-          <div class="flex text-[#DD6A05] text-sm">
+          <div class="flex text-sm text-[#DD6A05]">
             <Icon v-for="n in 5" :key="n" icon="mdi:star" />
           </div>
           <span class="text-gray-300">|</span>
-          <span class="text-gray-600 font-normal">Verified Partner Reviews</span>
+          <span class="font-normal text-gray-600">Verified Partner Reviews</span>
         </div>
 
         <h2
-          class="text-3xl font-serif font-normal tracking-tight leading-tight sm:text-4xl lg:text-5xl text-gray-900"
+          class="font-serif text-3xl leading-tight font-normal tracking-tight text-gray-900 sm:text-4xl lg:text-5xl"
         >
           Trusted by tech leaders
         </h2>
       </div>
 
       <!-- Andela Testimonial Card Grid (Image 1 Layout - 3 Original Testimonials) -->
-      <div class="grid grid-cols-1 gap-8 md:grid-cols-3 lg:gap-8 max-w-6xl mx-auto">
+      <div class="mx-auto grid max-w-6xl grid-cols-1 gap-8 md:grid-cols-3 lg:gap-8">
         <article
           v-for="item in testimonials"
           :key="item.name"
@@ -60,26 +65,28 @@ const testimonials = [
         >
           <div class="space-y-5">
             <!-- 5 Gold Stars Header -->
-            <div class="flex text-[#DD6A05] text-sm">
+            <div class="flex text-sm text-[#DD6A05]">
               <Icon v-for="n in 5" :key="n" icon="mdi:star" />
             </div>
 
             <!-- Quote Text -->
-            <blockquote class="text-sm sm:text-base leading-relaxed text-gray-700 font-normal">
+            <blockquote class="text-sm leading-relaxed font-normal text-gray-700 sm:text-base">
               &ldquo;{{ item.testimonial }}&rdquo;
             </blockquote>
           </div>
 
           <!-- Bottom Author Info & Company Avatar -->
-          <div class="pt-6 flex items-center justify-between mt-6">
+          <div class="mt-6 flex items-center justify-between pt-6">
             <div>
               <p class="text-sm font-bold text-gray-900">{{ item.name }}</p>
-              <p class="text-xs text-gray-500 font-medium">{{ item.company }}</p>
-              <p class="text-[11px] text-gray-400 mt-0.5">{{ item.role }}</p>
+              <p class="text-xs font-medium text-gray-500">{{ item.company }}</p>
+              <p class="mt-0.5 text-[11px] text-gray-400">{{ item.role }}</p>
             </div>
 
             <!-- Company / Person Avatar -->
-            <div class="size-10 rounded-xl bg-gray-50 border border-gray-200/60 flex items-center justify-center overflow-hidden shrink-0">
+            <div
+              class="flex size-10 shrink-0 items-center justify-center overflow-hidden rounded-xl border border-gray-200/60 bg-gray-50"
+            >
               <NuxtImg :src="item.photo" :alt="item.name" class="size-full object-cover" />
             </div>
           </div>
@@ -89,8 +96,4 @@ const testimonials = [
   </section>
 </template>
 
-<style scoped lang="css">
-</style>
-
-
-
+<style scoped lang="css"></style>

@@ -57,27 +57,35 @@ const closeLeaderModal = () => {
 </script>
 
 <template>
-  <section id="about_leadership" class="bg-gray-50/70 py-20 lg:py-32 text-gray-900 border-b border-gray-100">
+  <section
+    id="about_leadership"
+    class="border-b border-gray-100 bg-gray-50/70 py-20 text-gray-900 lg:py-32"
+  >
     <div class="mx-auto w-5/6 max-w-7xl space-y-16">
-      <div v-reveal="'fade-up'" class="text-center max-w-3xl mx-auto space-y-4">
-        <span class="text-xs uppercase tracking-widest text-[#04308F] font-semibold bg-[#04308F]/10 px-4 py-1.5 rounded-full inline-block">
+      <div v-reveal="'fade-up'" class="mx-auto max-w-3xl space-y-4 text-center">
+        <span
+          class="inline-block rounded-full bg-[#04308F]/10 px-4 py-1.5 text-xs font-semibold tracking-widest text-[#04308F] uppercase"
+        >
           Leadership Team
         </span>
-        <h2 class="text-3xl font-serif font-normal tracking-tight sm:text-4xl lg:text-5xl text-gray-900 leading-tight">
+        <h2
+          class="font-serif text-3xl leading-tight font-normal tracking-tight text-gray-900 sm:text-4xl lg:text-5xl"
+        >
           Meet our leaders
         </h2>
-        <p class="text-base text-gray-500 leading-relaxed font-normal">
-          The minds behind Deagensie bring together creativity, intelligence, and execution. Click any leader to read their bio and connect.
+        <p class="text-base leading-relaxed font-normal text-gray-500">
+          The minds behind Deagensie bring together creativity, intelligence, and execution. Click
+          any leader to read their bio and connect.
         </p>
       </div>
 
       <!-- Leaders Grid -->
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+      <div class="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
         <div
           v-for="(leader, lIndex) in leaders"
           :key="leader.name"
           v-reveal="{ animation: 'fade-up', delay: lIndex * 120 }"
-          class="rounded-3xl bg-white border border-gray-100 overflow-hidden shadow-xs transition-all duration-300 hover:shadow-2xl hover:border-[#04308F]/20 hover:-translate-y-1.5 group cursor-pointer flex flex-col justify-between"
+          class="group flex cursor-pointer flex-col justify-between overflow-hidden rounded-3xl border border-gray-100 bg-white shadow-xs transition-all duration-300 hover:-translate-y-1.5 hover:border-[#04308F]/20 hover:shadow-2xl"
           @click="openLeaderModal(leader)"
         >
           <div>
@@ -87,15 +95,19 @@ const closeLeaderModal = () => {
                 :alt="leader.name"
                 class="size-full object-cover transition-transform duration-500 group-hover:scale-105"
               />
-              <div class="absolute inset-0 bg-gradient-to-t from-gray-900/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
-                <span class="text-xs font-semibold text-white inline-flex items-center gap-1.5">
+              <div
+                class="absolute inset-0 flex items-end bg-gradient-to-t from-gray-900/60 via-transparent to-transparent p-4 opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+              >
+                <span class="inline-flex items-center gap-1.5 text-xs font-semibold text-white">
                   View Profile &amp; Bio <Icon icon="lucide:arrow-up-right" />
                 </span>
               </div>
             </div>
 
-            <div class="p-6 space-y-1 text-center">
-              <h3 class="text-lg font-serif font-normal text-gray-900 group-hover:text-[#04308F] transition-colors">
+            <div class="space-y-1 p-6 text-center">
+              <h3
+                class="font-serif text-lg font-normal text-gray-900 transition-colors group-hover:text-[#04308F]"
+              >
                 {{ leader.name }}
               </h3>
               <p class="text-xs font-semibold text-[#04308F]">
@@ -105,13 +117,16 @@ const closeLeaderModal = () => {
           </div>
 
           <!-- Quick Social Links Bar -->
-          <div class="px-6 pb-6 pt-2 flex items-center justify-center gap-3 border-t border-gray-100" @click.stop>
+          <div
+            class="flex items-center justify-center gap-3 border-t border-gray-100 px-6 pt-2 pb-6"
+            @click.stop
+          >
             <a
               :href="leader.linkedin"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="LinkedIn profile"
-              class="size-8 rounded-full bg-gray-100 text-gray-600 hover:bg-[#04308F] hover:text-white flex items-center justify-center transition-colors text-sm"
+              class="flex size-8 items-center justify-center rounded-full bg-gray-100 text-sm text-gray-600 transition-colors hover:bg-[#04308F] hover:text-white"
             >
               <Icon icon="ri:linkedin-fill" />
             </a>
@@ -120,7 +135,7 @@ const closeLeaderModal = () => {
               target="_blank"
               rel="noopener noreferrer"
               aria-label="X (Twitter) profile"
-              class="size-8 rounded-full bg-gray-100 text-gray-600 hover:bg-[#04308F] hover:text-white flex items-center justify-center transition-colors text-sm"
+              class="flex size-8 items-center justify-center rounded-full bg-gray-100 text-sm text-gray-600 transition-colors hover:bg-[#04308F] hover:text-white"
             >
               <Icon icon="prime:twitter" />
             </a>
@@ -131,26 +146,40 @@ const closeLeaderModal = () => {
 
     <!-- Leader Bio Modal Overlay -->
     <Transition name="fade-scale">
-      <div v-if="selectedLeader" class="fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-xs p-4" @click.self="closeLeaderModal">
-        <div class="relative w-full max-w-xl rounded-3xl bg-white p-8 shadow-2xl space-y-6 max-h-[90vh] overflow-y-auto">
+      <div
+        v-if="selectedLeader"
+        class="fixed inset-0 z-50 flex items-center justify-center bg-black/60 p-4 backdrop-blur-xs"
+        @click.self="closeLeaderModal"
+      >
+        <div
+          class="relative max-h-[90vh] w-full max-w-xl space-y-6 overflow-y-auto rounded-3xl bg-white p-8 shadow-2xl"
+        >
           <button
             type="button"
             aria-label="Close modal"
-            class="absolute top-6 right-6 size-10 rounded-full bg-gray-100 text-gray-600 hover:bg-gray-200 flex items-center justify-center transition-colors"
+            class="absolute top-6 right-6 flex size-10 items-center justify-center rounded-full bg-gray-100 text-gray-600 transition-colors hover:bg-gray-200"
             @click="closeLeaderModal"
           >
             <Icon icon="lucide:x" class="text-xl" />
           </button>
 
           <div class="flex items-center gap-6">
-            <div class="size-20 sm:size-24 rounded-2xl overflow-hidden bg-gray-100 border border-gray-200 shrink-0">
-              <NuxtImg :src="selectedLeader.image" :alt="selectedLeader.name" class="size-full object-cover" />
+            <div
+              class="size-20 shrink-0 overflow-hidden rounded-2xl border border-gray-200 bg-gray-100 sm:size-24"
+            >
+              <NuxtImg
+                :src="selectedLeader.image"
+                :alt="selectedLeader.name"
+                class="size-full object-cover"
+              />
             </div>
             <div class="space-y-1">
-              <span class="px-3 py-1 rounded-full text-xs font-semibold bg-[#04308F]/10 text-[#04308F] inline-block mb-1">
+              <span
+                class="mb-1 inline-block rounded-full bg-[#04308F]/10 px-3 py-1 text-xs font-semibold text-[#04308F]"
+              >
                 Executive Leadership
               </span>
-              <h3 class="text-2xl font-serif font-normal text-gray-900 leading-tight">
+              <h3 class="font-serif text-2xl leading-tight font-normal text-gray-900">
                 {{ selectedLeader.name }}
               </h3>
               <p class="text-sm font-semibold text-[#04308F]">
@@ -159,21 +188,23 @@ const closeLeaderModal = () => {
             </div>
           </div>
 
-          <div class="space-y-3 pt-4 border-t border-gray-100">
-            <h4 class="text-xs uppercase tracking-wider text-gray-400 font-semibold">Biography</h4>
-            <p class="text-sm text-gray-600 leading-relaxed font-normal">
+          <div class="space-y-3 border-t border-gray-100 pt-4">
+            <h4 class="text-xs font-semibold tracking-wider text-gray-400 uppercase">Biography</h4>
+            <p class="text-sm leading-relaxed font-normal text-gray-600">
               {{ selectedLeader.bio }}
             </p>
           </div>
 
-          <div class="pt-4 border-t border-gray-100 flex items-center justify-between">
-            <span class="text-xs text-gray-400 font-medium">Connect with {{ selectedLeader.name }}</span>
+          <div class="flex items-center justify-between border-t border-gray-100 pt-4">
+            <span class="text-xs font-medium text-gray-400"
+              >Connect with {{ selectedLeader.name }}</span
+            >
             <div class="flex items-center gap-3">
               <a
                 :href="selectedLeader.linkedin"
                 target="_blank"
                 rel="noopener noreferrer"
-                class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#04308F] text-white text-xs font-semibold hover:bg-[#05DED5] hover:text-gray-900 transition-colors shadow-xs"
+                class="inline-flex items-center gap-2 rounded-full bg-[#04308F] px-4 py-2 text-xs font-semibold text-white shadow-xs transition-colors hover:bg-[#05DED5] hover:text-gray-900"
               >
                 <Icon icon="ri:linkedin-fill" class="text-base" /> LinkedIn
               </a>
@@ -181,7 +212,7 @@ const closeLeaderModal = () => {
                 :href="selectedLeader.twitter"
                 target="_blank"
                 rel="noopener noreferrer"
-                class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gray-900 text-white text-xs font-semibold hover:bg-[#05DED5] hover:text-gray-900 transition-colors shadow-xs"
+                class="inline-flex items-center gap-2 rounded-full bg-gray-900 px-4 py-2 text-xs font-semibold text-white shadow-xs transition-colors hover:bg-[#05DED5] hover:text-gray-900"
               >
                 <Icon icon="prime:twitter" class="text-base" /> X (Twitter)
               </a>

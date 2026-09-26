@@ -2,7 +2,10 @@ import type { DirectiveBinding } from 'vue';
 
 export default defineNuxtPlugin((nuxtApp) => {
   nuxtApp.vueApp.directive('reveal', {
-    mounted(el: HTMLElement, binding: DirectiveBinding<string | { animation?: string; delay?: number; duration?: number }>) {
+    mounted(
+      el: HTMLElement,
+      binding: DirectiveBinding<string | { animation?: string; delay?: number; duration?: number }>
+    ) {
       if (typeof window === 'undefined') return;
 
       let animationClass = 'reveal-fade-up';

@@ -140,7 +140,8 @@ onUnmounted(cancelClose);
               <NuxtLink to="/business" class="hover:underline">Business Growth</NuxtLink>
             </p>
             <p class="linedblock text-sm leading-relaxed">
-              Explore our premium business growth solutions tailored for startups and category disruptors.
+              Explore our premium business growth solutions tailored for startups and category
+              disruptors.
             </p>
           </div>
           <div class="space-y-4">
@@ -218,7 +219,8 @@ onUnmounted(cancelClose);
             <NuxtLink to="/contact" class="hover:underline">Join Our Community</NuxtLink>
           </p>
           <p class="linedblock text-sm leading-relaxed">
-            Become a member of our emerging young leaders network dedicated to nurturing creative talent.
+            Become a member of our emerging young leaders network dedicated to nurturing creative
+            talent.
           </p>
         </div>
       </div>
@@ -234,19 +236,28 @@ onUnmounted(cancelClose);
             <NuxtLink to="/why" class="hover:underline">Why Deagensie</NuxtLink>
           </p>
           <p class="mt-6 mb-4">
-            Deagensie isn&apos;t just an agency—it&apos;s a growth engine, a predictive intelligence platform, and a business accelerator in one.
+            Deagensie isn&apos;t just an agency—it&apos;s a growth engine, a predictive intelligence
+            platform, and a business accelerator in one.
           </p>
-          <NuxtLink to="/why" class="inline-flex items-center gap-2 px-4 py-2.5 font-semibold text-[#04308F] hover:underline">
+          <NuxtLink
+            to="/why"
+            class="inline-flex items-center gap-2 px-4 py-2.5 font-semibold text-[#04308F] hover:underline"
+          >
             Learn more
             <Icon icon="hugeicons:arrow-right-02" class="text-xl" />
           </NuxtLink>
         </div>
-        <NuxtImg src="/images/pages/(home)/hero.webp" class="aspect-291/178 rounded-md object-cover" />
+        <NuxtImg
+          src="/images/pages/(home)/hero.webp"
+          class="aspect-291/178 rounded-md object-cover"
+        />
       </div>
       <div class="flex-1 space-y-6">
         <div class="space-y-4">
           <p class="text-lg leading-snug font-medium">
-            <NuxtLink to="/business" class="hover:underline">On-Demand Business Growth Team</NuxtLink>
+            <NuxtLink to="/business" class="hover:underline"
+              >On-Demand Business Growth Team</NuxtLink
+            >
           </p>
           <p class="linedblock text-sm leading-relaxed">
             Hire an on-demand squad of top-tier strategists, designers, and growth hackers.
@@ -257,7 +268,8 @@ onUnmounted(cancelClose);
             <NuxtLink to="/creatives" class="hover:underline">Creatives Experience</NuxtLink>
           </p>
           <p class="linedblock text-sm leading-relaxed">
-            African creatives can now find fulfilling careers while staying connected to their roots.
+            African creatives can now find fulfilling careers while staying connected to their
+            roots.
           </p>
         </div>
         <div class="space-y-4">
@@ -292,9 +304,7 @@ onUnmounted(cancelClose);
       <div class="grid flex-1 grid-cols-2 gap-6 p-10">
         <div class="space-y-4">
           <p class="text-lg leading-snug font-medium">
-            <NuxtLink to="/about" class="hover:underline">
-              Who We Are
-            </NuxtLink>
+            <NuxtLink to="/about" class="hover:underline"> Who We Are </NuxtLink>
           </p>
           <p class="linedblock text-sm leading-relaxed">
             Creative agency building Strategies, Identities, Platforms & Campaigns.
@@ -310,9 +320,7 @@ onUnmounted(cancelClose);
         </div>
         <div class="space-y-4">
           <p class="text-lg leading-snug font-medium">
-            <NuxtLink to="/about" class="hover:underline">
-              Leadership
-            </NuxtLink>
+            <NuxtLink to="/about" class="hover:underline"> Leadership </NuxtLink>
           </p>
           <p class="linedblock text-sm leading-relaxed">
             Meet the formidable team leading Deagensie Digitals.

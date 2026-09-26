@@ -84,17 +84,22 @@ const onSubmit = handleSubmit(async (values, actions) => {
 </script>
 
 <template>
-  <div class="bg-white min-h-screen">
+  <div class="min-h-screen bg-white">
     <!-- Andela-Style Editorial Header -->
-    <section class="pt-28 pb-16 lg:pt-36 lg:pb-20 border-b border-gray-100">
-      <div class="mx-auto w-5/6 max-w-7xl text-center space-y-5">
-        <span class="text-xs uppercase tracking-widest text-[#04308F] font-semibold bg-[#04308F]/10 px-4 py-1.5 rounded-full inline-block">
+    <section class="border-b border-gray-100 pt-28 pb-16 lg:pt-36 lg:pb-20">
+      <div class="mx-auto w-5/6 max-w-7xl space-y-5 text-center">
+        <span
+          class="inline-block rounded-full bg-[#04308F]/10 px-4 py-1.5 text-xs font-semibold tracking-widest text-[#04308F] uppercase"
+        >
           Get In Touch
         </span>
-        <h1 class="text-3xl font-serif font-normal tracking-tight sm:text-4xl lg:text-5xl xl:text-6xl text-gray-900">
-          Let us know how<br class="hidden sm:inline" /> we can help
+        <h1
+          class="font-serif text-3xl font-normal tracking-tight text-gray-900 sm:text-4xl lg:text-5xl xl:text-6xl"
+        >
+          Let us know how<br class="hidden sm:inline" />
+          we can help
         </h1>
-        <p class="text-base text-gray-500 lg:text-lg leading-relaxed max-w-2xl mx-auto font-normal">
+        <p class="mx-auto max-w-2xl text-base leading-relaxed font-normal text-gray-500 lg:text-lg">
           Whether you're looking to scale your business or find your next opportunity, we're here to
           make it happen.
         </p>
@@ -105,36 +110,48 @@ const onSubmit = handleSubmit(async (values, actions) => {
     <section class="py-16 lg:py-24">
       <div class="mx-auto w-5/6 max-w-7xl lg:flex lg:gap-14">
         <!-- Left Info Panel -->
-        <div class="mb-10 lg:mb-0 lg:w-96 lg:shrink-0 space-y-6">
+        <div class="mb-10 space-y-6 lg:mb-0 lg:w-96 lg:shrink-0">
           <!-- Get In Touch Card -->
-          <div class="rounded-3xl border border-gray-100 bg-gray-50 p-8 shadow-sm space-y-7">
-            <p class="text-xl font-serif font-normal text-gray-900">Get In Touch</p>
+          <div class="space-y-7 rounded-3xl border border-gray-100 bg-gray-50 p-8 shadow-sm">
+            <p class="font-serif text-xl font-normal text-gray-900">Get In Touch</p>
             <ul class="space-y-6">
               <li class="flex items-start gap-4">
-                <div class="size-11 rounded-full bg-[#04308F]/10 flex items-center justify-center shrink-0">
-                  <Icon icon="hugeicons:mail-02" class="text-[#04308F] text-lg" />
+                <div
+                  class="flex size-11 shrink-0 items-center justify-center rounded-full bg-[#04308F]/10"
+                >
+                  <Icon icon="hugeicons:mail-02" class="text-lg text-[#04308F]" />
                 </div>
                 <div class="space-y-0.5">
                   <p class="text-sm font-bold text-gray-900">Email</p>
-                  <a href="mailto:hello@deagensie.com" class="text-sm text-gray-500 hover:text-[#04308F] hover:underline transition-colors">
+                  <a
+                    href="mailto:hello@deagensie.com"
+                    class="text-sm text-gray-500 transition-colors hover:text-[#04308F] hover:underline"
+                  >
                     hello@deagensie.com
                   </a>
                 </div>
               </li>
               <li class="flex items-start gap-4">
-                <div class="size-11 rounded-full bg-[#04308F]/10 flex items-center justify-center shrink-0">
-                  <Icon icon="hugeicons:call-02" class="text-[#04308F] text-lg" />
+                <div
+                  class="flex size-11 shrink-0 items-center justify-center rounded-full bg-[#04308F]/10"
+                >
+                  <Icon icon="hugeicons:call-02" class="text-lg text-[#04308F]" />
                 </div>
                 <div class="space-y-0.5">
                   <p class="text-sm font-bold text-gray-900">Phone</p>
-                  <a href="tel:+2348063836398" class="text-sm text-gray-500 hover:text-[#04308F] hover:underline transition-colors">
+                  <a
+                    href="tel:+2348063836398"
+                    class="text-sm text-gray-500 transition-colors hover:text-[#04308F] hover:underline"
+                  >
                     +234 806 383 6398
                   </a>
                 </div>
               </li>
               <li class="flex items-start gap-4">
-                <div class="size-11 rounded-full bg-[#04308F]/10 flex items-center justify-center shrink-0">
-                  <Icon icon="hugeicons:clock-01" class="text-[#04308F] text-lg" />
+                <div
+                  class="flex size-11 shrink-0 items-center justify-center rounded-full bg-[#04308F]/10"
+                >
+                  <Icon icon="hugeicons:clock-01" class="text-lg text-[#04308F]" />
                 </div>
                 <div class="space-y-0.5">
                   <p class="text-sm font-bold text-gray-900">Availability</p>
@@ -147,33 +164,45 @@ const onSubmit = handleSubmit(async (values, actions) => {
 
           <!-- Follow Us Card -->
           <div class="rounded-3xl border border-gray-100 bg-gray-50 p-8 shadow-sm">
-            <p class="text-xl font-serif font-normal text-gray-900 mb-1">Follow Us</p>
-            <p class="text-sm text-gray-500 mb-6">Stay connected with the Deagensie community</p>
+            <p class="mb-1 font-serif text-xl font-normal text-gray-900">Follow Us</p>
+            <p class="mb-6 text-sm text-gray-500">Stay connected with the Deagensie community</p>
             <ul class="flex gap-3">
               <li>
-                <a href="https://linkedin.com/company/deagensie" target="_blank" rel="noopener"
-                  class="size-11 rounded-full border border-gray-200 bg-white flex items-center justify-center text-gray-600 hover:text-[#04308F] hover:border-[#04308F] hover:shadow-md transition-all duration-200"
+                <a
+                  href="https://linkedin.com/company/deagensie"
+                  target="_blank"
+                  rel="noopener"
+                  class="flex size-11 items-center justify-center rounded-full border border-gray-200 bg-white text-gray-600 transition-all duration-200 hover:border-[#04308F] hover:text-[#04308F] hover:shadow-md"
                 >
                   <Icon icon="mingcute:linkedin-fill" class="text-xl" />
                 </a>
               </li>
               <li>
-                <a href="https://instagram.com/deagensie" target="_blank" rel="noopener"
-                  class="size-11 rounded-full border border-gray-200 bg-white flex items-center justify-center text-gray-600 hover:text-[#8F039C] hover:border-[#8F039C] hover:shadow-md transition-all duration-200"
+                <a
+                  href="https://instagram.com/deagensie"
+                  target="_blank"
+                  rel="noopener"
+                  class="flex size-11 items-center justify-center rounded-full border border-gray-200 bg-white text-gray-600 transition-all duration-200 hover:border-[#8F039C] hover:text-[#8F039C] hover:shadow-md"
                 >
                   <Icon icon="ri:instagram-line" class="text-xl" />
                 </a>
               </li>
               <li>
-                <a href="https://x.com/deagensie" target="_blank" rel="noopener"
-                  class="size-11 rounded-full border border-gray-200 bg-white flex items-center justify-center text-gray-600 hover:text-gray-900 hover:border-gray-900 hover:shadow-md transition-all duration-200"
+                <a
+                  href="https://x.com/deagensie"
+                  target="_blank"
+                  rel="noopener"
+                  class="flex size-11 items-center justify-center rounded-full border border-gray-200 bg-white text-gray-600 transition-all duration-200 hover:border-gray-900 hover:text-gray-900 hover:shadow-md"
                 >
                   <Icon icon="devicon:twitter" class="text-xl" />
                 </a>
               </li>
               <li>
-                <a href="https://tiktok.com/@deagensie" target="_blank" rel="noopener"
-                  class="size-11 rounded-full border border-gray-200 bg-white flex items-center justify-center text-gray-600 hover:text-gray-900 hover:border-gray-900 hover:shadow-md transition-all duration-200"
+                <a
+                  href="https://tiktok.com/@deagensie"
+                  target="_blank"
+                  rel="noopener"
+                  class="flex size-11 items-center justify-center rounded-full border border-gray-200 bg-white text-gray-600 transition-all duration-200 hover:border-gray-900 hover:text-gray-900 hover:shadow-md"
                 >
                   <Icon icon="ri:tiktok-fill" class="text-xl" />
                 </a>
@@ -184,19 +213,23 @@ const onSubmit = handleSubmit(async (values, actions) => {
 
         <!-- Right Form Panel -->
         <form
-          class="flex-1 rounded-3xl border border-gray-100 bg-white p-8 shadow-md shadow-gray-100/60 space-y-8 lg:p-12"
+          class="flex-1 space-y-8 rounded-3xl border border-gray-100 bg-white p-8 shadow-md shadow-gray-100/60 lg:p-12"
           @submit="onSubmit"
         >
           <FieldSet>
-            <FieldLegend class="text-xl font-serif font-normal text-gray-900 mb-1">Send us a message</FieldLegend>
-            <FieldDescription class="text-sm text-gray-500 leading-relaxed">
+            <FieldLegend class="mb-1 font-serif text-xl font-normal text-gray-900"
+              >Send us a message</FieldLegend
+            >
+            <FieldDescription class="text-sm leading-relaxed text-gray-500">
               Fill out the form below and we&apos;ll get back to you within 24 hours.
             </FieldDescription>
 
             <FieldGroup class="mt-8 space-y-6">
               <div class="grid gap-5 lg:grid-cols-2">
                 <Field :data-invalid="!!errors.firstName">
-                  <FieldLabel for="firstName" class="text-sm font-semibold text-gray-700">First Name</FieldLabel>
+                  <FieldLabel for="firstName" class="text-sm font-semibold text-gray-700"
+                    >First Name</FieldLabel
+                  >
                   <Input
                     id="firstName"
                     v-model="firstName"
@@ -204,11 +237,15 @@ const onSubmit = handleSubmit(async (values, actions) => {
                     placeholder="e.g. John"
                     class="mt-1.5 rounded-xl border-gray-200"
                   />
-                  <FieldError v-if="errors.firstName" class="text-xs text-red-500 mt-1">{{ errors.firstName }}</FieldError>
+                  <FieldError v-if="errors.firstName" class="mt-1 text-xs text-red-500">{{
+                    errors.firstName
+                  }}</FieldError>
                 </Field>
 
                 <Field :data-invalid="!!errors.lastName">
-                  <FieldLabel for="lastName" class="text-sm font-semibold text-gray-700">Last Name</FieldLabel>
+                  <FieldLabel for="lastName" class="text-sm font-semibold text-gray-700"
+                    >Last Name</FieldLabel
+                  >
                   <Input
                     id="lastName"
                     v-model="lastName"
@@ -216,13 +253,17 @@ const onSubmit = handleSubmit(async (values, actions) => {
                     placeholder="e.g. Doe"
                     class="mt-1.5 rounded-xl border-gray-200"
                   />
-                  <FieldError v-if="errors.lastName" class="text-xs text-red-500 mt-1">{{ errors.lastName }}</FieldError>
+                  <FieldError v-if="errors.lastName" class="mt-1 text-xs text-red-500">{{
+                    errors.lastName
+                  }}</FieldError>
                 </Field>
               </div>
 
               <div class="grid gap-5 lg:grid-cols-2">
                 <Field :data-invalid="!!errors.email">
-                  <FieldLabel for="email" class="text-sm font-semibold text-gray-700">Email Address</FieldLabel>
+                  <FieldLabel for="email" class="text-sm font-semibold text-gray-700"
+                    >Email Address</FieldLabel
+                  >
                   <Input
                     id="email"
                     v-model="email"
@@ -231,19 +272,25 @@ const onSubmit = handleSubmit(async (values, actions) => {
                     placeholder="hello@company.com"
                     class="mt-1.5 rounded-xl border-gray-200"
                   />
-                  <FieldError v-if="errors.email" class="text-xs text-red-500 mt-1">{{ errors.email }}</FieldError>
+                  <FieldError v-if="errors.email" class="mt-1 text-xs text-red-500">{{
+                    errors.email
+                  }}</FieldError>
                 </Field>
 
                 <Field :data-invalid="!!errors.phone">
-                  <FieldLabel for="phone" class="text-sm font-semibold text-gray-700">Phone Number</FieldLabel>
+                  <FieldLabel for="phone" class="text-sm font-semibold text-gray-700"
+                    >Phone Number</FieldLabel
+                  >
                   <PhoneInput id="phone" name="phone" class="mt-1.5" />
-                  <FieldError v-if="errors.phone" class="text-xs text-red-500 mt-1">{{ errors.phone }}</FieldError>
+                  <FieldError v-if="errors.phone" class="mt-1 text-xs text-red-500">{{
+                    errors.phone
+                  }}</FieldError>
                 </Field>
               </div>
 
               <Field :data-invalid="!!errors.companyName">
                 <FieldLabel for="company" class="text-sm font-semibold text-gray-700">
-                  Company Name <span class="text-gray-400 font-normal">(optional)</span>
+                  Company Name <span class="font-normal text-gray-400">(optional)</span>
                 </FieldLabel>
                 <Input
                   id="company"
@@ -252,23 +299,29 @@ const onSubmit = handleSubmit(async (values, actions) => {
                   placeholder="Acme Inc."
                   class="mt-1.5 rounded-xl border-gray-200"
                 />
-                <FieldError v-if="errors.companyName" class="text-xs text-red-500 mt-1">{{ errors.companyName }}</FieldError>
+                <FieldError v-if="errors.companyName" class="mt-1 text-xs text-red-500">{{
+                  errors.companyName
+                }}</FieldError>
               </Field>
 
               <Field :data-invalid="!!errors.serviceInterest">
                 <FieldLabel class="text-sm font-semibold text-gray-700">
-                  Service Interest <span class="text-gray-400 font-normal">(optional)</span>
+                  Service Interest <span class="font-normal text-gray-400">(optional)</span>
                 </FieldLabel>
                 <PagesContactServiceInterestCombobox
                   v-model="serviceInterest"
                   v-bind="serviceInterestAttrs"
                   class="mt-1.5"
                 />
-                <FieldError v-if="errors.serviceInterest" class="text-xs text-red-500 mt-1">{{ errors.serviceInterest }}</FieldError>
+                <FieldError v-if="errors.serviceInterest" class="mt-1 text-xs text-red-500">{{
+                  errors.serviceInterest
+                }}</FieldError>
               </Field>
 
               <Field :data-invalid="!!errors.message">
-                <FieldLabel for="message" class="text-sm font-semibold text-gray-700">Message</FieldLabel>
+                <FieldLabel for="message" class="text-sm font-semibold text-gray-700"
+                  >Message</FieldLabel
+                >
                 <Textarea
                   id="message"
                   v-model="message"
@@ -277,7 +330,9 @@ const onSubmit = handleSubmit(async (values, actions) => {
                   :rows="5"
                   class="mt-1.5 rounded-xl border-gray-200"
                 />
-                <FieldError v-if="errors.message" class="text-xs text-red-500 mt-1">{{ errors.message }}</FieldError>
+                <FieldError v-if="errors.message" class="mt-1 text-xs text-red-500">{{
+                  errors.message
+                }}</FieldError>
               </Field>
             </FieldGroup>
           </FieldSet>
@@ -285,7 +340,7 @@ const onSubmit = handleSubmit(async (values, actions) => {
           <button
             type="submit"
             :disabled="isSubmitDisabled"
-            class="flex w-full items-center justify-center gap-2 rounded-full bg-[#04308F] px-8 py-4 text-base font-semibold text-white shadow-md transition-all duration-300 hover:bg-[#05DED5] hover:text-gray-900 hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed"
+            class="flex w-full items-center justify-center gap-2 rounded-full bg-[#04308F] px-8 py-4 text-base font-semibold text-white shadow-md transition-all duration-300 hover:scale-105 hover:bg-[#05DED5] hover:text-gray-900 disabled:cursor-not-allowed disabled:opacity-50"
           >
             <template v-if="isSubmitting">
               Sending
@@ -302,5 +357,4 @@ const onSubmit = handleSubmit(async (values, actions) => {
   </div>
 </template>
 
-<style scoped lang="css">
-</style>
+<style scoped lang="css"></style>

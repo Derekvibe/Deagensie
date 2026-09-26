@@ -7,10 +7,7 @@ const route = useRoute();
 const router = useRouter();
 const loadMoreTrigger = useTemplateRef<HTMLElement>('loadMoreTrigger');
 
-const {
-  data: offeringsPage,
-  pending,
-} = await useApiData<OfferingsResponse>('/offerings', {
+const { data: offeringsPage, pending } = await useApiData<OfferingsResponse>('/offerings', {
   key: 'offerings-page-1',
   baseURL: '/api',
   query: {
@@ -85,20 +82,35 @@ useOverflow(carouselContent, {
 </script>
 
 <template>
-  <div class="subscription-page bg-white text-gray-900 pt-28 pb-16 lg:pt-36 lg:pb-24 border-b border-gray-100">
-    <div class="mx-auto w-5/6 max-w-7xl text-center space-y-8">
-      <div v-reveal="'fade-up'" class="max-w-3xl mx-auto space-y-4">
-        <span class="text-xs uppercase tracking-widest text-[#04308F] font-semibold bg-[#04308F]/10 px-4 py-1.5 rounded-full inline-block">
+  <div
+    class="subscription-page border-b border-gray-100 bg-white pt-28 pb-16 text-gray-900 lg:pt-36 lg:pb-24"
+  >
+    <div class="mx-auto w-5/6 max-w-7xl space-y-8 text-center">
+      <div v-reveal="'fade-up'" class="mx-auto max-w-3xl space-y-4">
+        <span
+          class="inline-block rounded-full bg-[#04308F]/10 px-4 py-1.5 text-xs font-semibold tracking-widest text-[#04308F] uppercase"
+        >
           Transparent Pricing &amp; Plans
         </span>
-        <h1 class="text-3xl font-serif font-normal tracking-tight sm:text-4xl lg:text-6xl text-gray-900 leading-tight">
+        <h1
+          class="font-serif text-3xl leading-tight font-normal tracking-tight text-gray-900 sm:text-4xl lg:text-6xl"
+        >
           <template v-if="activeOffering">{{ activeOffering?.name }}</template>
-          <Skeleton v-else class="inline-block h-12 w-full max-w-md" :class="{ 'animate-none': !pending }" />
+          <Skeleton
+            v-else
+            class="inline-block h-12 w-full max-w-md"
+            :class="{ 'animate-none': !pending }"
+          />
         </h1>
-        <p class="text-base text-gray-500 sm:text-lg leading-relaxed font-normal">
+        <p class="text-base leading-relaxed font-normal text-gray-500 sm:text-lg">
           <template v-if="activeOffering">{{ activeOffering?.description }}</template>
           <template v-else>
-            <Skeleton v-for="n in 2" :key="n" class="inline-block h-4 w-full my-1" :class="{ 'animate-none': !pending }" />
+            <Skeleton
+              v-for="n in 2"
+              :key="n"
+              class="my-1 inline-block h-4 w-full"
+              :class="{ 'animate-none': !pending }"
+            />
           </template>
         </p>
       </div>
@@ -110,8 +122,12 @@ useOverflow(carouselContent, {
             v-for="{ code, button } in offerings"
             :key="code"
             :to="`/subscription/${code}`"
-            class="px-6 py-3 rounded-full text-sm font-semibold transition-all duration-300"
-            :class="route.params.code === code ? 'bg-[#04308F] text-white shadow-md shadow-[#04308F]/20' : 'bg-gray-100 text-gray-600 hover:bg-gray-200'"
+            class="rounded-full px-6 py-3 text-sm font-semibold transition-all duration-300"
+            :class="
+              route.params.code === code
+                ? 'bg-[#04308F] text-white shadow-md shadow-[#04308F]/20'
+                : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
+            "
           >
             {{ button }}
           </NuxtLink>
@@ -126,5 +142,4 @@ useOverflow(carouselContent, {
   </div>
 </template>
 
-<style scoped lang="css">
-</style>
+<style scoped lang="css"></style>

@@ -87,39 +87,49 @@ onMounted(() => {
 // ─── SEO Meta ───────────────────────────────────────────────
 useSeoMeta({
   title: 'Our Portfolio — Deagensie',
-  description: "We don't just create business solutions, we craft experiences that captivate, connect and convert.",
+  description:
+    "We don't just create business solutions, we craft experiences that captivate, connect and convert.",
 });
 </script>
 
 <template>
-  <div class="bg-white text-gray-900 min-h-screen">
+  <div class="min-h-screen bg-white text-gray-900">
     <!-- ══════════════════════════════════════════════
          EDITORIAL HERO — Clean Open Aesthetic
          ══════════════════════════════════════════════ -->
-    <section class="relative pt-28 pb-20 lg:pt-36 lg:pb-28 border-b border-gray-100 overflow-hidden">
+    <section
+      class="relative overflow-hidden border-b border-gray-100 pt-28 pb-20 lg:pt-36 lg:pb-28"
+    >
       <!-- Ambient background blur -->
-      <div class="absolute inset-0 pointer-events-none">
-        <div class="absolute top-0 left-[10%] w-96 h-96 rounded-full bg-[#04308F]/5 blur-3xl" />
-        <div class="absolute bottom-0 right-[5%] w-72 h-72 rounded-full bg-[#05DED5]/8 blur-3xl" />
+      <div class="pointer-events-none absolute inset-0">
+        <div class="absolute top-0 left-[10%] h-96 w-96 rounded-full bg-[#04308F]/5 blur-3xl" />
+        <div class="absolute right-[5%] bottom-0 h-72 w-72 rounded-full bg-[#05DED5]/8 blur-3xl" />
       </div>
 
       <div class="relative z-10 mx-auto w-5/6 max-w-7xl">
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div class="grid grid-cols-1 items-center gap-12 lg:grid-cols-2">
           <!-- Left copy -->
           <div v-reveal="'fade-up'" class="space-y-8">
-            <span class="text-xs uppercase tracking-widest text-[#04308F] font-semibold bg-[#04308F]/10 px-4 py-1.5 rounded-full inline-block">
+            <span
+              class="inline-block rounded-full bg-[#04308F]/10 px-4 py-1.5 text-xs font-semibold tracking-widest text-[#04308F] uppercase"
+            >
               Deagensie Showcase
             </span>
-            <h1 class="text-3xl font-serif font-normal tracking-tight sm:text-4xl lg:text-6xl text-gray-900 leading-tight">
-              We craft experiences that captivate, connect<span class="text-[#04308F] italic"> & convert.</span>
+            <h1
+              class="font-serif text-3xl leading-tight font-normal tracking-tight text-gray-900 sm:text-4xl lg:text-6xl"
+            >
+              We craft experiences that captivate, connect<span class="text-[#04308F] italic">
+                & convert.</span
+              >
             </h1>
-            <p class="text-base text-gray-500 sm:text-lg leading-relaxed font-normal max-w-lg">
-              Empowering businesses and creatives with skills, insights, and strategies to innovate and succeed in the digital creative economy.
+            <p class="max-w-lg text-base leading-relaxed font-normal text-gray-500 sm:text-lg">
+              Empowering businesses and creatives with skills, insights, and strategies to innovate
+              and succeed in the digital creative economy.
             </p>
-            <div class="flex flex-col sm:flex-row gap-4">
+            <div class="flex flex-col gap-4 sm:flex-row">
               <NuxtLink
                 to="/contact"
-                class="inline-flex items-center justify-center gap-2 rounded-full bg-[#04308F] px-7 py-3.5 text-sm font-semibold text-white transition-all duration-300 hover:bg-[#05DED5] hover:text-gray-900 shadow-md shadow-[#04308F]/20"
+                class="inline-flex items-center justify-center gap-2 rounded-full bg-[#04308F] px-7 py-3.5 text-sm font-semibold text-white shadow-md shadow-[#04308F]/20 transition-all duration-300 hover:bg-[#05DED5] hover:text-gray-900"
               >
                 Start a Project <Icon icon="lucide:arrow-right" class="text-base" />
               </NuxtLink>
@@ -134,23 +144,31 @@ useSeoMeta({
 
           <!-- Right Hero Visual Collage -->
           <div v-reveal="'scale-in'" class="relative">
-            <div class="rounded-3xl overflow-hidden border border-gray-100 shadow-2xl shadow-gray-200/60 aspect-video bg-gray-100">
+            <div
+              class="aspect-video overflow-hidden rounded-3xl border border-gray-100 bg-gray-100 shadow-2xl shadow-gray-200/60"
+            >
               <NuxtImg
                 src="/images/works/lw-trade-and-investment-forum/showcase.webp"
                 alt="Deagensie Portfolio Showcase"
                 class="size-full object-cover transition-transform duration-700 hover:scale-105"
               />
-              <div class="absolute inset-0 bg-linear-to-t from-gray-900/40 via-transparent to-transparent" />
+              <div
+                class="absolute inset-0 bg-linear-to-t from-gray-900/40 via-transparent to-transparent"
+              />
             </div>
 
             <!-- Floating stat badges -->
-            <div class="absolute -bottom-5 -left-5 rounded-2xl bg-white border border-gray-100 shadow-xl p-4 text-center space-y-0.5 hidden sm:block animate-float">
-              <p class="text-2xl font-bold text-[#04308F] font-mono">100+</p>
-              <p class="text-xs text-gray-500 font-medium">Projects Delivered</p>
+            <div
+              class="animate-float absolute -bottom-5 -left-5 hidden space-y-0.5 rounded-2xl border border-gray-100 bg-white p-4 text-center shadow-xl sm:block"
+            >
+              <p class="font-mono text-2xl font-bold text-[#04308F]">100+</p>
+              <p class="text-xs font-medium text-gray-500">Projects Delivered</p>
             </div>
-            <div class="absolute -top-4 -right-4 rounded-2xl bg-[#04308F] border border-white shadow-xl p-4 text-center space-y-0.5 hidden sm:block animate-float-slow">
-              <p class="text-2xl font-bold text-white font-mono">4.9★</p>
-              <p class="text-xs text-gray-300 font-medium">Verified Reviews</p>
+            <div
+              class="animate-float-slow absolute -top-4 -right-4 hidden space-y-0.5 rounded-2xl border border-white bg-[#04308F] p-4 text-center shadow-xl sm:block"
+            >
+              <p class="font-mono text-2xl font-bold text-white">4.9★</p>
+              <p class="text-xs font-medium text-gray-300">Verified Reviews</p>
             </div>
           </div>
         </div>
@@ -160,14 +178,18 @@ useSeoMeta({
     <!-- ══════════════════════════════════════════════
          CATEGORY FILTER PILLS BAR (Non-Sticky)
          ══════════════════════════════════════════════ -->
-    <section class="bg-white border-b border-gray-100 py-6 shadow-xs">
+    <section class="border-b border-gray-100 bg-white py-6 shadow-xs">
       <div class="mx-auto w-5/6 max-w-7xl">
-        <div class="flex flex-wrap items-center gap-2.5 overflow-x-auto no-scrollbar py-1">
+        <div class="no-scrollbar flex flex-wrap items-center gap-2.5 overflow-x-auto py-1">
           <!-- All pill -->
           <button
             type="button"
-            class="rounded-full px-5 py-2.5 text-xs sm:text-sm font-semibold transition-all duration-300 shrink-0"
-            :class="activeFilter === null ? 'bg-[#04308F] text-white shadow-md shadow-[#04308F]/20 scale-105' : 'bg-gray-100 text-gray-600 hover:bg-gray-200'"
+            class="shrink-0 rounded-full px-5 py-2.5 text-xs font-semibold transition-all duration-300 sm:text-sm"
+            :class="
+              activeFilter === null
+                ? 'scale-105 bg-[#04308F] text-white shadow-md shadow-[#04308F]/20'
+                : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
+            "
             @click="activeFilter = null"
           >
             All Projects
@@ -176,8 +198,12 @@ useSeoMeta({
             v-for="filter in portfolioFilters"
             :key="filter"
             type="button"
-            class="rounded-full px-5 py-2.5 text-xs sm:text-sm font-semibold transition-all duration-300 shrink-0"
-            :class="activeFilter === filter ? 'bg-[#04308F] text-white shadow-md shadow-[#04308F]/20 scale-105' : 'bg-gray-100 text-gray-600 hover:bg-gray-200'"
+            class="shrink-0 rounded-full px-5 py-2.5 text-xs font-semibold transition-all duration-300 sm:text-sm"
+            :class="
+              activeFilter === filter
+                ? 'scale-105 bg-[#04308F] text-white shadow-md shadow-[#04308F]/20'
+                : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
+            "
             @click="activeFilter = filter"
           >
             {{ filter }}
@@ -191,7 +217,11 @@ useSeoMeta({
          ══════════════════════════════════════════════ -->
     <section class="mx-auto w-5/6 max-w-7xl py-16 lg:py-24">
       <Transition name="fade" mode="out-in">
-        <div v-if="filteredProjects.length" :key="activeFilter ?? 'all'" class="grid grid-cols-1 gap-10 md:grid-cols-2 lg:gap-12">
+        <div
+          v-if="filteredProjects.length"
+          :key="activeFilter ?? 'all'"
+          class="grid grid-cols-1 gap-10 md:grid-cols-2 lg:gap-12"
+        >
           <div
             v-for="(project, pIndex) in filteredProjects"
             :key="project.id"
@@ -201,12 +231,16 @@ useSeoMeta({
           </div>
         </div>
 
-        <div v-else :key="'empty'" class="py-20 text-center space-y-4 rounded-3xl border border-gray-100 bg-gray-50">
-          <Icon icon="lucide:search-x" class="text-4xl text-gray-400 mx-auto" />
-          <p class="text-base text-gray-600 font-serif">No projects match this category filter.</p>
+        <div
+          v-else
+          :key="'empty'"
+          class="space-y-4 rounded-3xl border border-gray-100 bg-gray-50 py-20 text-center"
+        >
+          <Icon icon="lucide:search-x" class="mx-auto text-4xl text-gray-400" />
+          <p class="font-serif text-base text-gray-600">No projects match this category filter.</p>
           <button
             type="button"
-            class="px-5 py-2 rounded-full bg-[#04308F] text-white text-xs font-semibold hover:bg-[#05DED5] hover:text-gray-900 transition-colors"
+            class="rounded-full bg-[#04308F] px-5 py-2 text-xs font-semibold text-white transition-colors hover:bg-[#05DED5] hover:text-gray-900"
             @click="activeFilter = null"
           >
             Show All Projects
@@ -218,29 +252,33 @@ useSeoMeta({
     <!-- ══════════════════════════════════════════════
          PROVEN RESULTS STATS STRIP
          ══════════════════════════════════════════════ -->
-    <section class="bg-gray-50 border-t border-b border-gray-100 py-16 lg:py-24">
+    <section class="border-t border-b border-gray-100 bg-gray-50 py-16 lg:py-24">
       <div class="mx-auto w-5/6 max-w-7xl">
-        <div v-reveal="'fade-up'" class="text-center mb-12 space-y-3">
-          <span class="text-xs uppercase tracking-widest text-[#04308F] font-semibold bg-[#04308F]/10 px-4 py-1.5 rounded-full inline-block">
+        <div v-reveal="'fade-up'" class="mb-12 space-y-3 text-center">
+          <span
+            class="inline-block rounded-full bg-[#04308F]/10 px-4 py-1.5 text-xs font-semibold tracking-widest text-[#04308F] uppercase"
+          >
             Proven Results
           </span>
-          <h2 class="text-3xl font-serif font-normal sm:text-4xl text-gray-900">
+          <h2 class="font-serif text-3xl font-normal text-gray-900 sm:text-4xl">
             The numbers speak for themselves
           </h2>
         </div>
 
-        <div class="grid grid-cols-2 gap-6 md:grid-cols-4 sm:gap-8">
+        <div class="grid grid-cols-2 gap-6 sm:gap-8 md:grid-cols-4">
           <div
             v-for="(stat, statIndex) in animatedStats"
             :key="stat.label"
             :ref="(el) => setStatRef(el as any, statIndex)"
             v-reveal="{ animation: 'fade-up', delay: statIndex * 100 }"
-            class="text-center space-y-3 p-6 rounded-3xl bg-white border border-gray-100 shadow-xs hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group"
+            class="group space-y-3 rounded-3xl border border-gray-100 bg-white p-6 text-center shadow-xs transition-all duration-300 hover:-translate-y-1 hover:shadow-xl"
           >
-            <p class="text-4xl sm:text-5xl font-bold text-[#04308F] font-mono group-hover:text-[#05DED5] transition-colors">
+            <p
+              class="font-mono text-4xl font-bold text-[#04308F] transition-colors group-hover:text-[#05DED5] sm:text-5xl"
+            >
               {{ stat.display || stat.value }}
             </p>
-            <p class="text-xs sm:text-sm text-gray-500 font-medium leading-relaxed">
+            <p class="text-xs leading-relaxed font-medium text-gray-500 sm:text-sm">
               {{ stat.label }}
             </p>
           </div>
@@ -254,33 +292,42 @@ useSeoMeta({
     <section class="mx-auto w-5/6 max-w-7xl py-16 lg:py-24">
       <div
         v-reveal="'scale-in'"
-        class="relative overflow-hidden rounded-3xl bg-[#04308F] px-8 py-14 text-center text-white lg:px-14 lg:py-20 shadow-2xl shadow-[#04308F]/30"
+        class="relative overflow-hidden rounded-3xl bg-[#04308F] px-8 py-14 text-center text-white shadow-2xl shadow-[#04308F]/30 lg:px-14 lg:py-20"
       >
         <!-- Ambient Background Glows -->
-        <div class="absolute -top-20 -left-20 w-80 h-80 rounded-full bg-[#05DED5]/20 blur-3xl pointer-events-none" />
-        <div class="absolute -bottom-20 -right-20 w-80 h-80 rounded-full bg-[#8F039C]/15 blur-3xl pointer-events-none" />
+        <div
+          class="pointer-events-none absolute -top-20 -left-20 h-80 w-80 rounded-full bg-[#05DED5]/20 blur-3xl"
+        />
+        <div
+          class="pointer-events-none absolute -right-20 -bottom-20 h-80 w-80 rounded-full bg-[#8F039C]/15 blur-3xl"
+        />
 
-        <div class="relative z-10 space-y-6 max-w-3xl mx-auto">
-          <span class="text-xs uppercase tracking-widest text-[#05DED5] font-semibold inline-block">
+        <div class="relative z-10 mx-auto max-w-3xl space-y-6">
+          <span class="inline-block text-xs font-semibold tracking-widest text-[#05DED5] uppercase">
             Partner with Deagensie
           </span>
-          <h2 class="text-3xl font-serif font-normal sm:text-4xl lg:text-5xl text-white leading-tight">
+          <h2
+            class="font-serif text-3xl leading-tight font-normal text-white sm:text-4xl lg:text-5xl"
+          >
             Ready to Build What's Next?
           </h2>
-          <p class="text-sm sm:text-base leading-relaxed text-gray-200 font-normal max-w-xl mx-auto">
-            Let's create something extraordinary together. Partner with Deagensie and unlock a smarter, bolder future for your business.
+          <p
+            class="mx-auto max-w-xl text-sm leading-relaxed font-normal text-gray-200 sm:text-base"
+          >
+            Let's create something extraordinary together. Partner with Deagensie and unlock a
+            smarter, bolder future for your business.
           </p>
-          <div class="flex flex-col sm:flex-row items-center justify-center gap-4 pt-2">
+          <div class="flex flex-col items-center justify-center gap-4 pt-2 sm:flex-row">
             <NuxtLink
               to="/contact"
-              class="w-full sm:w-auto text-center inline-flex items-center justify-center gap-2 rounded-full bg-[#05DED5] px-8 py-4 text-base font-semibold text-gray-900 transition-all duration-300 hover:bg-white hover:scale-105 shadow-lg"
+              class="inline-flex w-full items-center justify-center gap-2 rounded-full bg-[#05DED5] px-8 py-4 text-center text-base font-semibold text-gray-900 shadow-lg transition-all duration-300 hover:scale-105 hover:bg-white sm:w-auto"
             >
               Get Started Today
               <Icon icon="lucide:arrow-right" class="text-base" />
             </NuxtLink>
             <NuxtLink
               to="/subscription"
-              class="w-full sm:w-auto text-center inline-flex items-center justify-center gap-2 rounded-full border border-white/30 px-8 py-4 text-base font-semibold text-white transition-all duration-300 hover:bg-white/10"
+              class="inline-flex w-full items-center justify-center gap-2 rounded-full border border-white/30 px-8 py-4 text-center text-base font-semibold text-white transition-all duration-300 hover:bg-white/10 sm:w-auto"
             >
               View Pricing Plans
             </NuxtLink>
@@ -296,35 +343,39 @@ useSeoMeta({
       <Transition name="modal">
         <div
           v-if="selectedProject"
-          class="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6 bg-black/60 backdrop-blur-md overflow-y-auto"
+          class="fixed inset-0 z-50 flex items-center justify-center overflow-y-auto bg-black/60 p-4 backdrop-blur-md sm:p-6"
           @click.self="closeProjectModal"
         >
           <div
-            class="relative w-full max-w-3xl rounded-3xl bg-white text-gray-900 p-6 sm:p-10 shadow-2xl overflow-hidden max-h-[90vh] flex flex-col space-y-6"
+            class="relative flex max-h-[90vh] w-full max-w-3xl flex-col space-y-6 overflow-hidden rounded-3xl bg-white p-6 text-gray-900 shadow-2xl sm:p-10"
           >
             <!-- Close Button -->
             <button
               type="button"
-              class="absolute top-5 right-5 size-10 rounded-full bg-gray-100 hover:bg-gray-200 flex items-center justify-center text-gray-600 transition-colors z-10"
+              class="absolute top-5 right-5 z-10 flex size-10 items-center justify-center rounded-full bg-gray-100 text-gray-600 transition-colors hover:bg-gray-200"
               @click="closeProjectModal"
             >
               <Icon icon="lucide:x" class="text-xl" />
             </button>
 
             <!-- Modal Header Image -->
-            <div class="relative aspect-video w-full rounded-2xl overflow-hidden bg-gray-100 shrink-0">
+            <div
+              class="relative aspect-video w-full shrink-0 overflow-hidden rounded-2xl bg-gray-100"
+            >
               <NuxtImg
                 v-if="selectedProject.cover"
                 :src="selectedProject.cover"
                 :alt="selectedProject.title"
                 class="size-full object-cover"
               />
-              <div class="absolute inset-0 bg-linear-to-t from-gray-900/40 via-transparent to-transparent" />
+              <div
+                class="absolute inset-0 bg-linear-to-t from-gray-900/40 via-transparent to-transparent"
+              />
               <div class="absolute bottom-4 left-4 flex flex-wrap gap-2">
                 <span
                   v-for="tag in selectedProject.tags"
                   :key="tag"
-                  class="rounded-full bg-white/90 backdrop-blur-xs px-3 py-1 text-xs font-bold uppercase tracking-wider text-gray-800 shadow-sm"
+                  class="rounded-full bg-white/90 px-3 py-1 text-xs font-bold tracking-wider text-gray-800 uppercase shadow-sm backdrop-blur-xs"
                 >
                   {{ tag }}
                 </span>
@@ -332,32 +383,36 @@ useSeoMeta({
             </div>
 
             <!-- Modal Body Content -->
-            <div class="space-y-4 overflow-y-auto pr-1 flex-1">
-              <div class="flex flex-wrap items-center justify-between text-xs text-[#04308F] font-semibold gap-2">
+            <div class="flex-1 space-y-4 overflow-y-auto pr-1">
+              <div
+                class="flex flex-wrap items-center justify-between gap-2 text-xs font-semibold text-[#04308F]"
+              >
                 <span>PROJECT CASE STUDY</span>
-                <span v-if="selectedProject.client" class="text-gray-400 font-normal">
+                <span v-if="selectedProject.client" class="font-normal text-gray-400">
                   Client: {{ selectedProject.client }}
                 </span>
               </div>
 
-              <h2 class="text-2xl sm:text-3xl font-serif font-normal text-gray-900 leading-snug">
+              <h2 class="font-serif text-2xl leading-snug font-normal text-gray-900 sm:text-3xl">
                 {{ selectedProject.title }}
               </h2>
 
-              <p class="text-base text-gray-600 leading-relaxed font-normal">
+              <p class="text-base leading-relaxed font-normal text-gray-600">
                 {{ selectedProject.description }}
               </p>
             </div>
 
             <!-- Modal Footer Action -->
-            <div class="pt-4 border-t border-gray-100 flex flex-col sm:flex-row items-center justify-between gap-4 shrink-0">
+            <div
+              class="flex shrink-0 flex-col items-center justify-between gap-4 border-t border-gray-100 pt-4 sm:flex-row"
+            >
               <div>
                 <p class="text-xs font-bold text-gray-900">Interested in a similar solution?</p>
                 <p class="text-xs text-gray-500">Deagensie delivers strategy, branding, & tech.</p>
               </div>
               <NuxtLink
                 to="/contact"
-                class="w-full sm:w-auto text-center rounded-full bg-[#04308F] px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-[#05DED5] hover:text-gray-900"
+                class="w-full rounded-full bg-[#04308F] px-6 py-3 text-center text-sm font-semibold text-white transition-colors hover:bg-[#05DED5] hover:text-gray-900 sm:w-auto"
                 @click="closeProjectModal"
               >
                 Discuss This Project
@@ -373,7 +428,9 @@ useSeoMeta({
 <style scoped>
 .fade-enter-active,
 .fade-leave-active {
-  transition: opacity 0.3s ease, transform 0.3s ease;
+  transition:
+    opacity 0.3s ease,
+    transform 0.3s ease;
 }
 
 .fade-enter-from,
@@ -384,7 +441,9 @@ useSeoMeta({
 
 .modal-enter-active,
 .modal-leave-active {
-  transition: opacity 0.3s ease, transform 0.3s ease;
+  transition:
+    opacity 0.3s ease,
+    transform 0.3s ease;
 }
 
 .modal-enter-from,

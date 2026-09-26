@@ -48,17 +48,17 @@ const getGridClasses = (planCount: number) => {
             <!-- Most Popular Badge -->
             <div
               v-if="plan.mostPopular"
-              class="absolute -top-3.5 left-1/2 -translate-x-1/2 rounded-full bg-[#05DED5] px-4 py-1 text-xs font-semibold uppercase tracking-wider text-gray-900 shadow-sm"
+              class="absolute -top-3.5 left-1/2 -translate-x-1/2 rounded-full bg-[#05DED5] px-4 py-1 text-xs font-semibold tracking-wider text-gray-900 uppercase shadow-sm"
             >
               Most Popular
             </div>
 
             <div class="space-y-3">
-              <h4 class="text-2xl font-serif font-normal tracking-tight">
+              <h4 class="font-serif text-2xl font-normal tracking-tight">
                 {{ plan.name }}
               </h4>
               <p
-                class="text-xs sm:text-sm leading-relaxed font-normal min-h-[3lh]"
+                class="min-h-[3lh] text-xs leading-relaxed font-normal sm:text-sm"
                 :class="plan.highlighted ? 'text-gray-200' : 'text-gray-500'"
               >
                 {{ plan.description }}
@@ -77,9 +77,12 @@ const getGridClasses = (planCount: number) => {
               {{ plan.note }}
             </div>
 
-            <div class="mt-6 border-t border-b py-6" :class="plan.highlighted ? 'border-white/10' : 'border-gray-100'">
+            <div
+              class="mt-6 border-t border-b py-6"
+              :class="plan.highlighted ? 'border-white/10' : 'border-gray-100'"
+            >
               <div class="flex items-baseline gap-1">
-                <strong class="text-3xl sm:text-4xl font-serif font-normal">
+                <strong class="font-serif text-3xl font-normal sm:text-4xl">
                   {{ formatPlanMoney(plan.price, plan.currency) }}
                 </strong>
                 <span
@@ -95,14 +98,14 @@ const getGridClasses = (planCount: number) => {
               {{ plan.ctaLabel }}
             </NuxtLink>
 
-            <div class="mt-8 space-y-4 flex-1">
+            <div class="mt-8 flex-1 space-y-4">
               <section
                 v-for="sec in plan.featureSections"
                 :key="`${plan.code}-${sec.title || 'features'}`"
               >
                 <h5
                   v-if="sec.title"
-                  class="mb-3 text-xs uppercase tracking-wider font-semibold"
+                  class="mb-3 text-xs font-semibold tracking-wider uppercase"
                   :class="plan.highlighted ? 'text-[#05DED5]' : 'text-[#04308F]'"
                 >
                   {{ sec.title }}
@@ -112,11 +115,11 @@ const getGridClasses = (planCount: number) => {
                   <li
                     v-for="item in sec.items"
                     :key="item"
-                    class="flex items-start gap-2.5 text-xs sm:text-sm leading-relaxed"
+                    class="flex items-start gap-2.5 text-xs leading-relaxed sm:text-sm"
                   >
                     <Icon
                       icon="hugeicons:tick-02"
-                      class="text-base shrink-0 mt-0.5"
+                      class="mt-0.5 shrink-0 text-base"
                       :class="plan.highlighted ? 'text-[#05DED5]' : 'text-[#04308F]'"
                     />
                     <span :class="plan.highlighted ? 'text-gray-200' : 'text-gray-600'">
@@ -140,7 +143,7 @@ const getGridClasses = (planCount: number) => {
           <template v-if="section.type === 'feature-grid'">
             <h2
               v-if="section.title"
-              class="mx-auto mb-10 max-w-4xl text-center text-3xl font-serif font-normal text-gray-900 sm:text-4xl"
+              class="mx-auto mb-10 max-w-4xl text-center font-serif text-3xl font-normal text-gray-900 sm:text-4xl"
             >
               {{ section.title }}
             </h2>
@@ -149,15 +152,17 @@ const getGridClasses = (planCount: number) => {
               <article
                 v-for="item in section.items"
                 :key="item.title"
-                class="rounded-3xl border border-gray-100 bg-gray-50/50 p-6 shadow-2xs space-y-4"
+                class="space-y-4 rounded-3xl border border-gray-100 bg-gray-50/50 p-6 shadow-2xs"
               >
-                <div class="size-12 rounded-2xl bg-[#04308F]/10 text-[#04308F] flex items-center justify-center text-2xl">
+                <div
+                  class="flex size-12 items-center justify-center rounded-2xl bg-[#04308F]/10 text-2xl text-[#04308F]"
+                >
                   <Icon :icon="item.icon" />
                 </div>
-                <h3 class="text-xl font-serif font-normal text-gray-900">
+                <h3 class="font-serif text-xl font-normal text-gray-900">
                   {{ item.title }}
                 </h3>
-                <p class="text-xs text-gray-500 leading-relaxed font-normal">
+                <p class="text-xs leading-relaxed font-normal text-gray-500">
                   {{ item.description }}
                 </p>
               </article>
@@ -165,17 +170,19 @@ const getGridClasses = (planCount: number) => {
           </template>
 
           <template v-else-if="section.type === 'cta-band'">
-            <div class="rounded-3xl bg-[#04308F] text-white p-8 sm:p-12 text-center space-y-6">
-              <h2 class="text-2xl sm:text-4xl font-serif font-normal text-white">
+            <div class="space-y-6 rounded-3xl bg-[#04308F] p-8 text-center text-white sm:p-12">
+              <h2 class="font-serif text-2xl font-normal text-white sm:text-4xl">
                 {{ section.title }}
               </h2>
-              <p class="max-w-2xl mx-auto text-sm sm:text-base text-gray-200 font-normal leading-relaxed">
+              <p
+                class="mx-auto max-w-2xl text-sm leading-relaxed font-normal text-gray-200 sm:text-base"
+              >
                 {{ section.subtitle }}
               </p>
               <div class="pt-2">
                 <NuxtLink
                   :to="section.buttonHref || '/contact'"
-                  class="inline-flex items-center gap-2 rounded-full bg-[#05DED5] px-8 py-3.5 text-sm font-semibold text-gray-900 hover:bg-white transition-colors"
+                  class="inline-flex items-center gap-2 rounded-full bg-[#05DED5] px-8 py-3.5 text-sm font-semibold text-gray-900 transition-colors hover:bg-white"
                 >
                   {{ section.buttonLabel }}
                 </NuxtLink>
@@ -188,5 +195,4 @@ const getGridClasses = (planCount: number) => {
   </section>
 </template>
 
-<style scoped lang="css">
-</style>
+<style scoped lang="css"></style>

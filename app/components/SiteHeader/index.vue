@@ -57,15 +57,17 @@ onUnmounted(() => {
 </script>
 
 <template>
-  <header class="fixed top-0 left-0 z-50 w-full px-3 pt-3 transition-all duration-300 sm:px-6 lg:px-8">
+  <header
+    class="fixed top-0 left-0 z-50 w-full px-3 pt-3 transition-all duration-300 sm:px-6 lg:px-8"
+  >
     <div
       class="mx-auto flex h-16 w-full max-w-7xl items-center justify-between rounded-full px-5 transition-all duration-300 lg:h-18 lg:px-8"
       :class="[
         shouldUseHeaderStyle
-          ? 'border-border/80 bg-background/90 text-foreground shadow-lg backdrop-blur-md border'
+          ? 'border-border/80 bg-background/90 text-foreground border shadow-lg backdrop-blur-md'
           : isScrolled
-            ? 'border-white/20 bg-black/65 text-white shadow-xl backdrop-blur-md border'
-            : 'border-white/15 bg-black/35 text-white backdrop-blur-sm border'
+            ? 'border border-white/20 bg-black/65 text-white shadow-xl backdrop-blur-md'
+            : 'border border-white/15 bg-black/35 text-white backdrop-blur-sm',
       ]"
     >
       <NuxtLink to="/" aria-label="Go to homepage" class="shrink-0">
@@ -80,4 +82,3 @@ onUnmounted(() => {
     </div>
   </header>
 </template>
-
