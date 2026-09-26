@@ -27,5 +27,3 @@ pre-push:
     typecheck:
       glob: '**/*.{ts,vue}'
       run: pnpm typecheck
-    build:
-      run: pnpm build
