@@ -22,12 +22,12 @@ import { Icon } from '@iconify/vue';
         </h2>
       </div>
 
-      <!-- Andela-Style Sticky Stacked Elevated Cards Container -->
-      <div class="relative space-y-10 lg:space-y-16">
+      <!-- Feature Cards Sequence -->
+      <div class="space-y-10 lg:space-y-16">
         <!-- Card 1: AI-Driven Branding -->
         <article
           v-reveal="'fade-up'"
-          class="group relative sticky top-28 z-10 rounded-3xl border border-gray-100 bg-white p-8 shadow-2xl shadow-gray-200/80 transition-all duration-500 sm:top-32 sm:p-10 lg:p-12"
+          class="group relative rounded-3xl border border-gray-100 bg-white p-8 shadow-2xl shadow-gray-200/80 transition-all duration-500 hover:-translate-y-1 sm:p-10 lg:p-12"
         >
           <div class="grid grid-cols-1 items-center gap-8 lg:grid-cols-12 lg:gap-12">
             <!-- Left Info Content -->
@@ -122,7 +122,7 @@ import { Icon } from '@iconify/vue';
         <!-- Card 2: Talent-as-a-Service (TaaS) -->
         <article
           v-reveal="'fade-up'"
-          class="group relative sticky top-34 z-20 rounded-3xl border border-gray-100 bg-white p-8 shadow-2xl shadow-gray-200/80 transition-all duration-500 sm:top-40 sm:p-10 lg:p-12"
+          class="group relative rounded-3xl border border-gray-100 bg-white p-8 shadow-2xl shadow-gray-200/80 transition-all duration-500 hover:-translate-y-1 sm:p-10 lg:p-12"
         >
           <div class="grid grid-cols-1 items-center gap-8 lg:grid-cols-12 lg:gap-12">
             <!-- Left Info Content -->
@@ -193,8 +193,9 @@ import { Icon } from '@iconify/vue';
                   <span class="text-xs font-bold text-gray-500 uppercase">Talent Pipeline</span>
                   <span
                     class="rounded-full bg-blue-100 px-2.5 py-0.5 text-xs font-bold text-[#04308F]"
-                    >Active</span
                   >
+                    Active
+                  </span>
                 </div>
                 <div class="space-y-3">
                   <div
@@ -230,7 +231,7 @@ import { Icon } from '@iconify/vue';
         <!-- Card 3: Founders' Growth Lab -->
         <article
           v-reveal="'fade-up'"
-          class="group relative sticky top-40 z-30 rounded-3xl border border-gray-100 bg-white p-8 shadow-2xl shadow-gray-200/80 transition-all duration-500 sm:top-48 sm:p-10 lg:p-12"
+          class="group relative rounded-3xl border border-gray-100 bg-white p-8 shadow-2xl shadow-gray-200/80 transition-all duration-500 hover:-translate-y-1 sm:p-10 lg:p-12"
         >
           <div class="grid grid-cols-1 items-center gap-8 lg:grid-cols-12 lg:gap-12">
             <!-- Left Info Content -->
